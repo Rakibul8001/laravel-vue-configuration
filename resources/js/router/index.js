@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ProductListing from '../components/ProductListing.vue';
+import Index from '../components/products/Index.vue';
 import NotFound from '../components/NotFound.vue';
+import ProductForm from '../components/products/Form.vue';
 
 
 const router = createRouter({
@@ -8,8 +9,18 @@ const router = createRouter({
     routes:[
         {
             path:'/',
-            name:'home',
-            component: ProductListing
+            name:'products.index',
+            component: Index
+        },
+        {
+            path:'/products/create',
+            name:'products.create',
+            component: ProductForm
+        },
+        {
+            path:'/products/:id/edit',
+            name:'products.edit',
+            component: ProductForm
         },
         {
             path:'/:catchAll(.*)',

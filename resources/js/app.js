@@ -1,4 +1,4 @@
-import './bootstrap';
+import 'primeicons/primeicons.css'
 import App from './components/App.vue';
 import { createApp } from 'vue';
 import router from './router';
